@@ -24,15 +24,16 @@ public class Lotissement implements GestionPropriete {
 		int s = 0;
 		for (int i = 0; i < nombre; i++) {
 			if (tabProp[i] instanceof ProprietePrivee)
-				s += ((ProprietePrivee)(tabProp[i])).getNbPieces();}	
-	return s;}
-
+				s += ((ProprietePrivee) (tabProp[i])).getNbPieces();
+		}
+		return s;
+	}
 
 	@Override
 	public void afficherProprietes() {
 		for (int i = 0; i < nombre; i++) {
 			System.out.println(tabProp[i].toString());
-			System.out.println("La valeur des impots a payer : "+tabProp[i].calcullmpot()+"\n");
+			System.out.println("La valeur des impots a payer : " + tabProp[i].calcullmpot() + "\n");
 		}
 	}
 
